@@ -1,0 +1,16 @@
+<zk>
+    <div style=" padding: 5px; width: 200px; min-height: 100%; background-color:#b8b8b8 ; margin-top: 20px; border:2px solid black ; border-radius:4px;">
+        <vlayout>
+            <label value="Select Bank"/>
+            <combobox >
+                <comboitem label="Axis Bank" />
+                <comboitem label="Bank of India" />
+                <comboitem label="Canara Bank" />
+                <comboitem label="CGGB Bank" />
+                <comboitem label="HDFC Bank" />
+                <comboitem label="SBI Bank" />
+                <comboitem label="Union Bank" />
+            </combobox>
+        </vlayout>   
+    </div>
+</zk>

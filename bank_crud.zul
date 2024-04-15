@@ -1,0 +1,13 @@
+<zk>
+<borderlayout>
+	<north>
+		<include src="navbar.zul"  />
+    </north>
+    <west>
+    	<include src="dropdown'.zul"/>
+    </west>
+    <center>
+    	<include src="slides.zul"/>
+    </center>
+</borderlayout>
+</zk>

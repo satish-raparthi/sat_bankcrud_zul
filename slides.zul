@@ -1,0 +1,32 @@
+<?page title="Slides"?>
+<zk xmlns="http://www.zkoss.org/2005/zul"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
+
+    <window apply="SlideController">
+        <hbox>
+            <div id="slideshow" style="width: 500px; height: 300px; position: relative; overflow: hidden; border: 1px solid #ccc;">
+                <image id="slide1" src="https://via.placeholder.com/500x300?text=Slide+1" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; transition: opacity 1s ease-in-out;" />
+                <image id="slide2" src="https://via.placeholder.com/500x300?text=Slide+2" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; transition: opacity 1s ease-in-out; opacity: 0;" />
+                <image id="slide3" src="https://via.placeholder.com/500x300?text=Slide+3" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; transition: opacity 1s ease-in-out; opacity: 0;" />
+            </div>
+            <button id="nextButton" label="Next Slide" />
+        </hbox>
+    </window>
+    
+    <script>
+    function nextSlide() {
+    var current = document.getElementById('slide1');
+    var next = document.getElementById('slide2');
+
+    current.style.opacity = 0;
+    next.style.opacity = 1;
+
+    setTimeout(function() {
+        current.style.display = 'none';
+        next.style.display = 'block';
+    }, 1000); // Wait for 1 second (1000 milliseconds) before hiding the current slide and showing the next slide
+}
+    
+    </script>
+</zk>
