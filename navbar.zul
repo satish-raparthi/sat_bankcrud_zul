@@ -1,10 +1,10 @@
 <zk>
-    <div class="navbar" style="display: flex; align-items: center; justify-content: space-between; background-color: lightblue; border: 6px double black; border-radius:12px;">
+    <div class="navbar" style="display: flex; align-items: center; justify-content: space-between; background-color: lightblue; border: 6px double black; border-radius: 12px; padding: 10px;">
         <div>
-            <image src="https://t4.ftcdn.net/jpg/00/61/06/27/360_F_61062796_NF87GPnWV0fQ2LhoYNlyjev0PocRwZj9.jpg" width="150px" height="90px" />
+            <image src="https://t4.ftcdn.net/jpg/00/61/06/27/360_F_61062796_NF87GPnWV0fQ2LhoYNlyjev0PocRwZj9.jpg" width="150px" height="90px" style="border-radius: 6px;"/>
         </div>
         <div>
-            <label style="font-size: 50px; color: navy;">Banking Fundas</label>
+            <label style="font-size: 32px; color: navy; font-weight: bold;">Banking Fundas</label>
         </div>
         <div>
             <image src="https://pennanttech.com/wp-content/uploads/2021/08/Pennant-logo-color-1.png" width="210px"/>
