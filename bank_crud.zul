@@ -1,11 +1,12 @@
+<!-- bank_crud.zul -->
 <zk>
 <borderlayout>
 	<north>
 		<include src="navbar.zul"  />
     </north>
-    <west>
+     <west>
     	<include src="dropdown'.zul"/>
-    </west>
+    </west> 
     <center>
     	<include src="slides.zul"/>
     </center>
