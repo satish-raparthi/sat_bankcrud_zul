@@ -1,8 +1,9 @@
+<!-- dropdown'.zul -->
 <zk>
     <div style="padding: 10px; width: 200px; min-height: 100%; background-color: #b8b8b8; margin-top: 20px; border: 2px solid black; border-radius: 4px;">
         <vlayout>
             <label value="Select Bank" style="font-weight: bold; font-size: 16px; margin-bottom: 10px;" />
-            <combobox id="bankComboBox" onChange="showLoanInfo(self.getSelectedItem().getLabel())" style="width: 100%;">
+            <combobox id="bankComboBox" style="width: 100%;"  onSelect="showSelectedItem(event)">
                 <comboitem label="Axis Bank" />
                 <comboitem label="Bank of India" />
                 <comboitem label="Canara Bank" />
@@ -13,4 +14,16 @@
             </combobox>
         </vlayout>
     </div>
+    <script>
+    <![CDATA[
+        
+        function showSelectedItem(event) {
+            var slidesWindow = zk.Widget.$('#slidesWindow');
+            if (slidesWindow) {
+                slidesWindow.$n().style.display = 'none';
+            }
+        }
+    ]]>
+</script>
+
 </zk>
