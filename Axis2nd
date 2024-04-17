@@ -1,0 +1,19 @@
+<zk>
+    <window title="Axis Bank Loan Offers" border="normal" width="300px">
+        <vbox>
+            <label value="Axis Bank" style="font-weight:bold; font-size:14px;"/>
+            <groupbox title="Gold Loan" mold="3d" open="true">
+                <vbox>
+                    <label value="Rate of Interest: 14%" />
+                    <button label="APPLY NOW" onClick="applyForLoan('gold')" />
+                </vbox>
+            </groupbox>
+            <groupbox title="House Loan" mold="3d" open="true">
+                <vbox>
+                    <label value="Rate of Interest: 13%" />
+                    <button label="APPLY NOW" onClick="applyForLoan('house')" />
+                </vbox>
+            </groupbox>
+        </vbox>
+    </window>
+</zk>
