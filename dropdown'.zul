@@ -1,29 +1,18 @@
-<!-- dropdown'.zul -->
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
 <zk>
-    <div style="padding: 10px; width: 200px; min-height: 100%; background-color: #b8b8b8; margin-top: 20px; border: 2px solid black; border-radius: 4px;">
-        <vlayout>
-            <label value="Select Bank" style="font-weight: bold; font-size: 16px; margin-bottom: 10px;" />
-            <combobox id="bankComboBox" style="width: 100%;"  onSelect="showSelectedItem(event)">
-                <comboitem label="Axis Bank" />
-                <comboitem label="Bank of India" />
-                <comboitem label="Canara Bank" />
-                <comboitem label="CGGB Bank" />
-                <comboitem label="HDFC Bank" />
-                <comboitem label="SBI Bank" />
-                <comboitem label="Union Bank" />
-            </combobox>
-        </vlayout>
-    </div>
-    <script>
-    <![CDATA[
-        
-        function showSelectedItem(event) {
-            var slidesWindow = zk.Widget.$('#slidesWindow');
-            if (slidesWindow) {
-                slidesWindow.$n().style.display = 'none';
-            }
-        }
-    ]]>
-</script>
+	<menubar hflex="min" style=" border: 4px solid black; border-radius:3px;">
+		<menu label="TYPES OF BANKS">
+			<menupopup>
+				<menuitem label="Axis Bank" onClick='display("axis")' />
+				<menuitem label="Bank Of India" onClick='display("boi")' />
+				<menuitem label="Canara Bank" onClick='display("canara")' />
+				<menuitem label="CGGB Bank" onClick='display("cggb")' />
+				<menuitem label="HDFC Bank" onClick='display("hdfc")' />
+				<menuitem label="ICICI Bank" onClick='display("icici")' />
+				<menuitem label="Kotak Mahindra Bank" onClick='display("kmb")' />
+				<menuitem label="Union Bank" onClick='display("union")' />
+			</menupopup>
+		</menu>
+	</menubar>
 
 </zk>
