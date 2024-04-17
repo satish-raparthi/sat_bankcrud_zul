@@ -8,7 +8,46 @@
     	<include src="dropdown'.zul"/>
     </west> 
     <center>
-    	<include src="slides.zul"/>
+    	<include src="slides.zul" id="load"/>
     </center>
 </borderlayout>
+<zscript>
+<![CDATA[
+         void display(String x)
+         {
+        	 if(x.equals("axis"))
+        		 {
+        		 load.setSrc("AxisBank.zul");
+        		 }
+        	 if(x.equals("boi"))
+    		 {
+    		 load.setSrc("Bank_of_India.zul");
+    		 }
+        	 if(x.equals("canara"))
+    		 {
+    		 load.setSrc("CanaraBank.zul");
+    		 }
+        	 if(x.equals("cggb"))
+    		 {
+    		 load.setSrc("CGGB.zul");
+    		 }
+        	 if(x.equals("hdfc"))
+    		 {
+    		 load.setSrc("HDFC_Bank.zul");
+    		 }
+        	 if(x.equals("icici"))
+    		 {
+    		 load.setSrc("ICICI.zul");
+    		 }
+        	 if(x.equals("kmb"))
+    		 {
+    		 load.setSrc("Kotak_Mahindra_Bank.zul");
+    		 }
+        	 if(x.equals("union"))
+    		 {
+    		 load.setSrc("Union_Bank.zul");
+    		 }
+         }
+         ]]>
+</zscript>
 </zk>
