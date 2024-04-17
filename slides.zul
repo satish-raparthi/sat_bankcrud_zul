@@ -1,32 +1,43 @@
-<?page title="Slides"?>
-<zk xmlns="http://www.zkoss.org/2005/zul"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.zkoss.org/2005/zul http://www.zkoss.org/2005/zul/zul.xsd">
-
-    <window apply="SlideController">
-        <hbox>
-            <div id="slideshow" style="width: 500px; height: 300px; position: relative; overflow: hidden; border: 1px solid #ccc;">
-                <image id="slide1" src="https://via.placeholder.com/500x300?text=Slide+1" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; transition: opacity 1s ease-in-out;" />
-                <image id="slide2" src="https://via.placeholder.com/500x300?text=Slide+2" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; transition: opacity 1s ease-in-out; opacity: 0;" />
-                <image id="slide3" src="https://via.placeholder.com/500x300?text=Slide+3" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0; transition: opacity 1s ease-in-out; opacity: 0;" />
+<!-- slides.zul -->
+<zk>
+    <window id="slidesWindow">
+        <div id="sliderContainer" style="overflow: hidden; white-space: nowrap;">
+            <div class="slide" style=" width: 100%;">
+               <image src="https://images.livemint.com/img/2021/03/03/1600x900/46ae696c-4918-11eb-a90e-5259e870f573_1614759334280_1614759369935.jpg" style="width: 100%; height: auto;"/> 
             </div>
-            <button id="nextButton" label="Next Slide" />
-        </hbox>
+            <div class="slide" style=" width: 100%;">
+               <image src="https://m.economictimes.com/thumb/msid-105775107,width-1600,height-900,resizemode-4,imgsize-25624/bank-of-india-qip-sees-strong-demand-subscribed-4-5-times.jpg" style="width: 100%; height: auto;"/> 
+         
+            </div>
+            <div class="slide" style=" width: 100%;">
+               <image src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202311/canara-bank-1200-sixteen_nine_0-sixteen_nine.jpg" style="width: 100%; height: auto;"/> 
+            </div>
+            <div class="slide" style=" width: 100%;">
+               <image src="https://images.jdmagicbox.com/comp/rajahmundry/m7/9999px883.x883.140120112812.s6m7/catalogue/chaitanya-godavari-grameena-bank-danavaipeta-rajahmundry-banks-8yo93et.jpg" style="width: 100%; height: auto;"/> 
+            </div>
+            <div class="slide" style=" width: 100%;">
+               <image src="https://images.livemint.com/img/2021/07/06/1600x900/HDFC_1603903441816_1625565521011.jpg" style="width: 100%; height: auto;"/> 
+            </div>
+            <div class="slide" style=" width: 100%;">
+               <image src="https://images.livemint.com/img/2020/10/13/1600x900/a28b5eaa-e880-11ea-aeeb-bfe0af332d92_1599486888194_1602569091704.jpg" style="width: 100%; height: auto;"/> 
+            </div>
+            <div class="slide" style=" width: 100%;">
+               <image src="https://images.livemint.com/img/2023/01/22/1600x900/ff6db2b6-1549-11ec-a597-e468bf93ac55_1637300920648_1674385133938_1674385133938.jpg" style="width: 100%; height: auto;"/> 
+            </div>
+        </div>
+        <script>
+            zk.afterMount(function(){
+                var currentSlideIndex = 0;
+                var slides = document.getElementsByClassName("slide");
+
+                function showNextSlide() {
+                    slides[currentSlideIndex].style.display = "none";
+                    currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                    slides[currentSlideIndex].style.display = "inline-block";
+                }
+
+                setInterval(showNextSlide, 1500);
+            });
+        </script>
     </window>
-    
-    <script>
-    function nextSlide() {
-    var current = document.getElementById('slide1');
-    var next = document.getElementById('slide2');
-
-    current.style.opacity = 0;
-    next.style.opacity = 1;
-
-    setTimeout(function() {
-        current.style.display = 'none';
-        next.style.display = 'block';
-    }, 1000); // Wait for 1 second (1000 milliseconds) before hiding the current slide and showing the next slide
-}
-    
-    </script>
 </zk>
