@@ -1,0 +1,37 @@
+<!--Union_Bank.zul-->
+<zk>
+    <window title="Loan Information" border="normal" width="300px" height="310px" style=" position: absolute; top: 50%; left: 50%; border-radius:5px; transform: translate(-50%, -50%);">
+        <label value="Union Bank" style="font-weight:bold;text-align:center; display:block"/>
+        <separator/>
+        <grid>
+            <columns>
+                <column label="Loan Type"/>
+                <column label="Interest Rate"/>
+            </columns>
+            <rows>
+                <row>
+                    <label value="Property Loan"/>
+                    <label value="9%"/>
+                </row>
+                <row>
+                    <label value="Gold Loan"/>
+                    <label value="10%"/>
+                </row>
+                <row>
+                    <label value="Mortage Loan"/>
+                    <label value="11%"/>
+                </row>
+                <row>
+                    <label value="Common Loan"/>
+                    <label value="7%"/>
+                </row>
+                <row>
+                    <label value="Fullerton Loan"/>
+                    <label value="4%"/>
+                </row>
+            </rows>
+        </grid>
+        <separator/>
+        <label value="Best Loan of Union_Bank is 'Fullerton Loan'" style="color:blue;"/>
+    </window>
+</zk>
