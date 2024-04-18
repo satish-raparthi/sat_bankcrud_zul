@@ -1,40 +1,36 @@
-<?page title="New User Registration" contentType="text/html;charset=UTF-8"?>
-<zk>
-    <style>
-        .form-label {
-            width: 100px; /* Adjust the width as needed */
-        }
-        .form-button {
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
-    <window title="Registration Form" border="normal" width="400px" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('your.ViewModel')">
-        <vlayout style="margin: 15px;">
-            <label value="Please fill in your details:"/>
-            <hlayout spacing="10px">
-                <label value="Full Name:" sclass="form-label"/>
-                <textbox hflex="1"/>
-            </hlayout>
-            <hlayout spacing="10px">
-                <label value="Email:" sclass="form-label"/>
-                <textbox hflex="1"/>
-            </hlayout>
-            <hlayout spacing="10px">
-                <label value="Phone No:" sclass="form-label"/>
-                <textbox hflex="1"/>
-            </hlayout>
-            <hlayout spacing="10px">
-                <label value="College Name:" sclass="form-label"/>
-                <textbox hflex="1"/>
-            </hlayout>
-            <hlayout spacing="10px">
-                <label value="Branch:" sclass="form-label"/>
-                <textbox hflex="1"/>
-            </hlayout>
-            <center>
-                <button label="Submit" sclass="form-button"/>
-            </center>
-        </vlayout>
-    </window>
-</zk>
+
+<grid>
+    <rows>
+        <row>
+            <label value="Full Name:"  />
+            <textbox id="fullNameTextbox" />
+        </row>
+        <row>
+            <label value="Company Name:"  />
+            <textbox id="companyNameTextbox" />
+        </row>
+        <row>
+            <label value="Email:" />
+            <textbox id="emailTextbox" />
+        </row>
+        <row>
+            <label value="Phone Number:"  />
+            <textbox id="phoneNumberTextbox" />
+        </row>
+        <row>
+            <label value="City:" />
+            <textbox id="cityTextbox" />
+        </row>
+        <row>
+            <label value="Pincode:"/>
+            <textbox id="pincodeTextbox" />
+        </row>
+        <row>
+            <label value="State:" />
+            <textbox id="stateTextbox" />
+        </row>
+        <row>
+            <button label="Submit" onClick='alert("Succesfully Registered")' style="margin-left:160px;"/>
+        </row>
+    </rows>
+</grid>
