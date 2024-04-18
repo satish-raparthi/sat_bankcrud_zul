@@ -1,37 +1,58 @@
-<!--Bank_of_India.zul-->
+<!-- bank_crud.zul -->
 <zk>
-    <window title="Loan Information" border="normal" width="300px" height="310px" style=" position: absolute; top: 50%; left: 50%; border-radius:5px; transform: translate(-50%, -50%);">
-        <label value="Bank of India" style="font-weight:bold;text-align:center; display:block"/>
-        <separator/>
-        <grid>
-            <columns>
-                <column label="Loan Type"/>
-                <column label="Interest Rate"/>
-            </columns>
-            <rows>
-                <row>
-                    <label value="Educational Loan"/>
-                    <label value="9%"/>
-                </row>
-                <row>
-                    <label value="Personal Loan"/>
-                    <label value="10%"/>
-                </row>
-                <row>
-                    <label value="Vehicle Loan"/>
-                    <label value="11%"/>
-                </row>
-                <row>
-                    <label value="Housing Loan"/>
-                    <label value="7%"/>
-                </row>
-                <row>
-                    <label value="Auto Loan"/>
-                    <label value="4%"/>
-                </row>
-            </rows>
-        </grid>
-        <separator/>
-        <label value="Best Loan of Bank of India is 'Auto Loan'" style="color:blue;"/>
-    </window>
+<borderlayout>
+	<north>
+		<include src="navbar.zul"  />
+    </north>
+     <west>
+    	<include src="dropdown'.zul"/>
+    </west> 
+    <center>
+    	<include src="slides.zul" id="load"/>
+    </center>
+</borderlayout>
+
+<window title="Registration Form" border="normal" width="500px"  id="loan" closable="true" onClose="self.visible = false; event.stopPropagation();">
+	<include src="regis_form.zul"/>
+	</window>
+<zscript>
+<![CDATA[
+         void display(String x)
+         {
+        	 if(x.equals("axis")) 
+        		 {
+        		 load.setSrc("AxisBank.zul");
+        		 }
+        	 if(x.equals("boi"))
+    		 	{
+    		 	load.setSrc("Bank_of_India.zul");
+    		 	}
+        	 if(x.equals("canara"))
+    		 	{
+    		 	load.setSrc("CanaraBank.zul");
+    		 	}
+        	 if(x.equals("cggb"))
+    		 	{
+    		 	load.setSrc("CGGB.zul");
+    		 	}
+        	 if(x.equals("hdfc"))
+    		 	{
+    		 	load.setSrc("HDFC_Bank.zul");
+    		 	}
+        	 if(x.equals("icici"))
+    		 	{
+    		 	load.setSrc("ICICI.zul");
+    		 	}
+        	 if(x.equals("kmb"))
+    		 	{
+    		 	load.setSrc("Kotak_Mahindra_Bank.zul");
+    		 	}
+        	 if(x.equals("union"))
+    			{
+    			load.setSrc("Union_Bank.zul");
+    			}
+        	 
+         }
+         ]]>
+</zscript>
 </zk>
