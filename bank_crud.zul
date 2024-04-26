@@ -11,42 +11,47 @@
     	<include src="slides.zul" id="load"/>
     </center>
 </borderlayout>
+
+<window title="Registration Form" border="normal" width="500px"  id="loan" closable="true" onClose="self.visible = false; event.stopPropagation();">
+	<include src="regis_form.zul"/>
+	</window>
 <zscript>
 <![CDATA[
          void display(String x)
          {
-        	 if(x.equals("axis"))
+        	 if(x.equals("axis")) 
         		 {
         		 load.setSrc("AxisBank.zul");
         		 }
         	 if(x.equals("boi"))
-    		 {
-    		 load.setSrc("Bank_of_India.zul");
-    		 }
+    		 	{
+    		 	load.setSrc("Bank_of_India.zul");
+    		 	}
         	 if(x.equals("canara"))
-    		 {
-    		 load.setSrc("CanaraBank.zul");
-    		 }
+    		 	{
+    		 	load.setSrc("CanaraBank.zul");
+    		 	}
         	 if(x.equals("cggb"))
-    		 {
-    		 load.setSrc("CGGB.zul");
-    		 }
+    		 	{
+    		 	load.setSrc("CGGB.zul");
+    		 	}
         	 if(x.equals("hdfc"))
-    		 {
-    		 load.setSrc("HDFC_Bank.zul");
-    		 }
+    		 	{
+    		 	load.setSrc("HDFC_Bank.zul");
+    		 	}
         	 if(x.equals("icici"))
-    		 {
-    		 load.setSrc("ICICI.zul");
-    		 }
+    		 	{
+    		 	load.setSrc("ICICI.zul");
+    		 	}
         	 if(x.equals("kmb"))
-    		 {
-    		 load.setSrc("Kotak_Mahindra_Bank.zul");
-    		 }
+    		 	{
+    		 	load.setSrc("Kotak_Mahindra_Bank.zul");
+    		 	}
         	 if(x.equals("union"))
-    		 {
-    		 load.setSrc("Union_Bank.zul");
-    		 }
+    			{
+    			load.setSrc("Union_Bank.zul");
+    			}
+        	 
          }
          ]]>
 </zscript>
